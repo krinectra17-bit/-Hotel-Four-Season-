@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FAF9F6;
+    color: #25241F;
+  }
+
+  body {
+    background-color: #FAF9F6;
+    color: #25241F;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(165, 138, 97, 0.25);
+    color: #25241F;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5CEC2;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A58A61;
+}
+
+/* Editorial line decorative elements */
+.editorial-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E9E4DB 20%, #E9E4DB 80%, transparent);
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #A58A61 50%, transparent);
+}
+
+/* Luxury button transitions */
+.btn-primary {
+  @apply relative inline-flex items-center justify-center px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase text-white bg-primary hover:bg-[#181714] transition-all duration-300 ease-out shadow-sm;
+}
+
+.btn-secondary {
+  @apply relative inline-flex items-center justify-center px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase text-primary border border-primary/20 bg-transparent hover:bg-primary hover:text-white transition-all duration-300 ease-out;
+}
+
+.btn-accent {
+  @apply relative inline-flex items-center justify-center px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase text-white bg-accent hover:bg-accent-hover transition-all duration-300 ease-out shadow-sm;
+}
+
+.btn-whatsapp {
+  @apply relative inline-flex items-center justify-center px-7 py-3.5 text-xs font-semibold tracking-[0.16em] uppercase text-white bg-[#1E7E34] hover:bg-[#166527] transition-all duration-300 ease-out shadow-md hover:shadow-lg;
+}
+
+/* Image reveal / hover zoom */
+.img-editorial {
+  @apply transition-transform duration-700 ease-out;
+}
+.group:hover .img-editorial {
+  transform: scale(1.035);
+}
+
+/* Subtle architectural frame */
+.frame-border {
+  border: 1px solid #E9E4DB;
+}
+
+/* Varanasi subtle watermark/motif pattern */
+.varanasi-pattern {
+  background-image: radial-gradient(#A58A61 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
